@@ -1,0 +1,11 @@
+name: Ejercicio 2 - Manejo de secretos
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job_a:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Job A
+      run: echo "Susurra cuando pidas esto ${{ secrets.EJERCICIO2 }}"
