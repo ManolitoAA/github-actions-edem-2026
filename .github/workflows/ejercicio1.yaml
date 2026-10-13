@@ -1,16 +1,22 @@
 name: Ejercicio 1 - Crea una variable
 
 env:
-  VARIABLE: "Manolo"
+  Version: "v1.0"
 
 on:
   workflow_dispatch:
 
 jobs:
-  hello-world:
+  Build:
     runs-on: ubuntu-latest
     steps:
-      - name: First Step
-        run: echo "Hello World"
+      - name: Build app
+        run: echo "Building app in version $Version"
+
+  Deploy: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy app
+        run: echo "Deploying app in version $Version to a production enviroment" 
 
 
