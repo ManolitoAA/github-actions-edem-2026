@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       debug_mode:
-        type: boolean
+        type: boolean 
         description: Debug
         default: false
         required: false
